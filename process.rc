@@ -1,0 +1,36 @@
+#include "resource.h"
+
+#define IDC_REFRESH                                    3001
+#define IDC_EXIT                                       3002
+#define IDC_MODULE                                     3003
+#define IDC_PROCESS                                    3004
+#define IDC_KILL                                       3005
+#define IDC_DUMP                                       3006
+#define IDC_DLL                                        3007
+
+#define IDC_STATIC                                     -1
+
+1 ICON MOVEABLE PURE LOADONCALL DISCARDABLE "MAINICON.ICO"
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "process.exe.manifest" 
+
+#include <Res\ProcessDlg.rc>
+#define VERINF1 1
+VERINF1 VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILEOS 0x00000004
+FILETYPE 0x00000000
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904B0"
+    BEGIN
+      VALUE "FileVersion", "1.0.0\0"
+      VALUE "ProductVersion", "1.0.0\0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 0x04B0
+  END
+END

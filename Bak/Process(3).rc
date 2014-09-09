@@ -1,0 +1,32 @@
+#include "resource.h"
+
+#define IDC_REFRESH                                    3001
+#define IDC_EXIT                                       3002
+#define IDC_MODULE                                     3003
+#define IDC_PROCESS                                    3004
+#define IDC_KILL                                       3005
+#define IDC_DUMP                                       3006
+#define IDC_DLL                                        3007
+
+#define IDC_STATIC                                     -1
+
+1 ICON MOVEABLE PURE LOADONCALL DISCARDABLE "MAINICON.ICO"
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "proces.exe.manifest" 
+
+
+SVDialog DIALOG  0, 0, 280, 255
+STYLE 0x0004 | DS_CENTER | WS_CAPTION | WS_SYSMENU | WS_VISIBLE | WS_OVERLAPPED | DS_MODALFRAME | DS_3DLOOK
+CLASS "DLGCLASS"
+CAPTION "ProcessTools SV (08/2000)"
+FONT 8, "Lucida Console"
+BEGIN
+    DEFPUSHBUTTON   "Refresh",IDC_REFRESH,1,241,36,14,BS_FLAT
+    PUSHBUTTON      "Quit",IDC_EXIT,244,241,36,14,BS_FLAT
+    CONTROL         "List1",IDC_MODULE,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,0,120,279,119
+    CONTROL         "List1",IDC_PROCESS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,0,0,279,119
+    PUSHBUTTON      "Kill",IDC_KILL,41,241,36,14,BS_FLAT
+    PUSHBUTTON      "Dump",IDC_DUMP,81,241,36,14,BS_FLAT
+    PUSHBUTTON      "Import",IDC_DLL,121,241,36,14,BS_FLAT
+END

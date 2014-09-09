@@ -1,0 +1,16 @@
+#include "resource.h"
+
+#define IDC_REFRESH                                    3001
+#define IDC_EXIT                                       3002
+#define IDC_MODULE                                     3003
+#define IDC_PROCESS                                    3004
+#define IDC_KILL                                       3005
+#define IDC_DUMP                                       3006
+#define IDC_DLL                                        3007
+
+#define IDC_STATIC                                     -1
+
+1 ICON MOVEABLE PURE LOADONCALL DISCARDABLE "MAINICON.ICO"
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "process.exe.manifest" 
+
+#include <Res\ProcessDlg.rc>
